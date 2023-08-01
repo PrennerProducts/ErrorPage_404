@@ -2,6 +2,8 @@
 
 html {
   background-color: rgb(0, 0, 0);
+  width: auto;
+  object-fit: contain;
   color: white;
   overflow: hidden;
   height: 100%;
@@ -348,5 +350,19 @@ span.green {
 @media only screen and (min-height: 500px) {
   .viewFull {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .viewFull {
+    display: none;
+  }
+  html {
+    position: absolute;
+    scale: 0.7;
+    overflow-x: hidden !important;
+    overflow-y: hidden;
+    background-position: 0% 50%;
+    background-size: 500%;
   }
 }
